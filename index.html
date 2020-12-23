@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Goldman:wght@700&family=Modak&family=Orbitron:wght@500&family=Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="survey.css">
+    <style>
+    body {
+            padding: 0;
+            margin: 0;
+            background: url("https://i.postimg.cc/gj84DKK3/background.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .all {
+            background-attachment: fixed;
+        }
+        
+        #title {
+            margin: 0% 20%;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        
+        #title p {
+            text-transform: none;
+            color: aliceblue;
+            font-family: 'Lobster', cursive;
+        }
+        
+        h1 {
+            font-size: 200%;
+            padding: 11% 0% 0% 0%;
+            font-family: 'Goldman', cursive;
+            ;
+            color: aqua;
+            text-shadow: 0 0 3px #5f4136;
+            cursor: context-menu;
+        }
+        
+        #survey-form {
+            margin: 4% 7%;
+            border: 2px;
+            border-radius: 4px;
+            border-top: 5px solid rgb(185, 240, 103);
+            padding: 4%;
+            z-index: 2;
+            background-color: #101f7573;
+            box-shadow: 0 0 20px 0px #ffffff6e;
+        }
+        
+        .pp {
+            font-size: larger;
+            font-weight: 400;
+            text-align: center;
+            padding: 7px 0px;
+            text-transform: capitalize;
+            color: #25e3fb;
+            font-family: 'Vidaloka', serif;
+        }
+        
+        .twist {
+            max-height: 245px;
+        }
+        
+        .personal {
+            align-items: center;
+        }
+        
+        label {
+            text-transform: capitalize;
+            color: #beff5a;
+            font-family: 'Orbitron', sans-serif;
+            font-size: small;
+        }
+        
+        input {
+            padding: 1% 4%;
+            margin: 0% 0% 0% 3%;
+            border: none;
+            color: white;
+            outline: none;
+            background-color: #101f7500;
+            border-bottom: 2px solid #beff5a91;
+        }
+        
+        input::placeholder {
+            text-align: left;
+            font-size: medium;
+            font-family: monospace;
+        }
+        
+        input:hover {
+            border-bottom: 2px solid #beff5a;
+            background-color: #101f7500;
+            outline: none;
+        }
+        
+        input:focus {
+            background-color: #101f7500;
+        }
+        
+        #radio {
+            padding: 0% 2%;
+        }
+        
+        .box {
+            padding: 6px;
+        }
+        
+        #dropdown {
+            padding: 0% 4%;
+            margin: 0% 0% 0% 3%;
+            border: 1px solid gray;
+            outline: #beff5a;
+        }
+        
+        textarea {
+            margin: 10px 0px;
+            width: 99%;
+            height: 50px;
+            border: 2px solid #beff5a91;
+            border-radius: 5px;
+            outline: none;
+            background-color: #101f7500;
+            color: white;
+            font-size: medium;
+            font-family: monospace;
+        }
+        
+        textarea:hover {
+            border: 2px solid #beff5a;
+        }
+        
+        textarea:focus {
+            border: 2px solid #beff5a;
+        }
+        
+        textarea::placeholder {
+            padding: 3px;
+        }
+        
+        #number {
+            padding: 0% 5%;
+            margin: 0% 0% 0% 4.5%;
+            border: 1px solid #3f51b500;
+            border: 1px solid #beff5a91;
+            width: 80px;
+            border-radius: 5px;
+        }
+        
+        #number:hover {
+            border-bottom: 2px solid #beff5a;
+        }
+        
+        #number:focus {
+            border-bottom: 2px solid #beff5a;
+        }
+        
+        #number::placeholder {
+            text-align: left;
+            font-size: medium;
+            font-family: monospace;
+        }
+        
+        #submit {
+            margin: 3%;
+            padding: 7px;
+            background-color: #79c620;
+            border: 1px solid #a5e25e;
+            border-radius: 3px;
+            color: #1b3bed;
+            FONT-SIZE: medium;
+            box-shadow: 0 0 1px 0px snow;
+            FONT-WEIGHT: 700;
+            transition: 1s;
+        }
+        
+        #submit:hover {
+            box-shadow: 0 0 12px 0px snow;
+        }
+        
+        legend {
+            color: cornsilk;
+            font-size: medium;
+            font-family: monospace;
+            padding: 0% 0% 2% 0%;
+        }
+        
+        .dropgender {
+            padding: 0.4% 4%;
+            margin: 0% 0% 0% 4.5%;
+            border: 1px solid #3f51b500;
+            border: 2px solid #beff5a91;
+            width: 150px;
+            border-radius: 5px;
+        }
+        
+        .g-num {
+            padding: 1% 4%;
+            margin: 0% 0% 0% 3%;
+            border: none;
+            color: black;
+            outline: none;
+            background-color: white;
+            border-bottom: 2px solid #beff5a91;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="twist">
+        <div class="all">
+            <div id="title">
+                <h1>tech survey</h1>
+                <p id="description">a 30 years challenge </p>
+            </div>
+
+            <div class="survey-form">
+
+                <form action="" id="survey-form">
+                    <div id="sub-form">
+                        <p class="pp">personal inforation</p>
+                        <div class="personal">
+                            <div class="box">
+
+                                <label for="name" id="name-label">name
+<input type="text" id="name" placeholder="enter your name" required>
+</label>
+                            </div>
+                            <br>
+                            <div class="box">
+                                <label for="email" id="email-label">email
+<input type="email" id="email" placeholder="enter your email" required>
+</label>
+                            </div>
+                            <br>
+                            <div class="box">
+                                <label for="age" id="number-label">age
+<input type="number" id="number" value="number" min="5" max="70" placeholder="your age" required>
+</label>
+                            </div>
+                            <br>
+                            <div class="box">
+
+                                <label for="dropdown">gender
+    <select type="dropdown" id="dropdown" class="dropgender" required>
+        <option selected disabled>select</option>
+        <option >male</option>
+<option >female</option>
+<option >others</option>
+
+    </select>
+</label>
+                            </div>
+                            <br>
+                        </div>
+                        <p class="pp">let's start the survey</p>
+                      <p id="description" style="text-align:center;color:white;margin-bottom:5%;">just imagine </p>
+
+
+                        <legend>Did you/your family used any gadgets before 30 years (mobiles,laptops,pc) ?</legend>
+                        <div><span><input type="radio" id="radio-1" name="radio-1" required ></span><span><label id="radio" for="radio-1">yes</label></span></div>
+                        <div><span><input type="radio" id="radio-2" name="radio-1" required></span><span><label id="radio" for="radio-2">no</label></span></div>
+
+                        <br>
+
+                        <legend>yes means what are those?</legend>
+                        <div><span><input type="checkbox" id="check-1" name="radio-1"></span><span><label id="radio" for="check-1">button-phone</label></span></div>
+                        <div><span><input type="checkbox" id="check-2" name="radio-1"></span><span><label id="radio" for="check-2">laptop</label></span></div>
+                        <div><span><input type="checkbox" id="check-3" name="radio-1"></span><span><label id="radio" for="check-3">fax-machine</label></span></div>
+                        <div><span><input type="checkbox" id="check-4" name="radio-1"></span><span><label id="radio" for="check-4">landline</label></span></div>
+                        <div><span><input type="checkbox" id="check-5" name="radio-1"></span><span><label id="radio" for="check-5">computer</label></span></div>
+                        <div><span><input type="checkbox" id="check-6" name="radio-1"></span><span><label id="radio" for="check-6">radio</label></span></div>
+
+
+                        <br>
+
+                        <div class="box">
+
+                            <legend>Number of gadgets are now at present in your home?</legend>
+                            <div><input type="number" id="number" placeholder="enter here" class="g-num" style="background-color: aliceblue;" value="number" min="0" required></div>
+
+
+                        </div>
+                        <br>
+
+                        <div class="box">
+
+
+                            <legend>how wil you search informations before 30 years ?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >library</option>
+<option >dictionary</option>
+<option >news papers</option>
+<option >magazines</option>
+
+</select>
+
+                        </div>
+                        <br>
+
+
+                        <div class="box">
+                            <legend>Now where ypu are searching informations?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >google</option>
+<option >yahoo</option>
+<option >internet explorer</option>
+<option >opera</option>
+
+</select>
+                        </div>
+
+
+                        <div class="box">
+                            <legend>How or where will you chat with your friends ,then?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >schools/colleges</option>
+<option >phone</option>
+<option >functions</option>
+<option >street</option>
+
+</select>
+                        </div>
+
+
+                        <div class="box">
+                            <legend>Now,How or where will you chat with your friends?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >whatsapp</option>
+<option >facebook</option>
+<option >instagram</option>
+<option >other social media</option>
+
+</select>
+                        </div>
+
+                        <br>
+
+
+                        <legend aria-required="true">by which means you had got your birthday wishes in 1990?</legend>
+                        <div><span><input type="checkbox" id="check-6.o" name="radio-1" ></span><span><label id="radio" for="check-6.o">letters</label></span></div>
+                        <div><span><input type="checkbox" id="check-7" name="radio-1"></span><span><label id="radio" for="check-7">postcard</label></span></div>
+                        <div><span><input type="checkbox" id="check-8" name="radio-1"></span><span><label id="radio" for="check-8">telephone</label></span></div>
+                        <div><span><input type="checkbox" id="check-9" name="radio-1"></span><span><label id="radio" for="check-9">greeting cards</label></span></div>
+                        <div><span><input type="checkbox" id="check-10" name="radio-1"></span><span><label id="radio" for="check-10">school assembly</label></span></div>
+
+
+
+                        <br>
+
+                        <legend>Now,By which means you are getting your birthday wishes ?</legend>
+                        <div><span><input type="checkbox" id="check-11" name="radio-1"></span><span><label id="radio" for="check-11">social-media status</label></span></div>
+                        <div><span><input type="checkbox" id="check-12" name="radio-1"></span><span><label id="radio" for="check-12">posts</label></span></div>
+                        <div><span><input type="checkbox" id="check-13" name="radio-1"></span><span><label id="radio" for="check-13">chats</label></span></div>
+                        <div><span><input type="checkbox" id="check-14" name="radio-1"></span><span><label id="radio" for="check-14">vedio confriencing</label></span></div>
+                        <div><span><input type="checkbox" id="check-15" name="radio-1"></span><span><label id="radio" for="check-15">emails</label></span></div>
+                        <br>
+
+                        <div class="box">
+                            <legend>How will you transfer money in 1990?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >checks</option>
+<option >bank chelans</option>
+<option >direct transfer</option>
+<option >money order</option>
+
+
+</select>
+                        </div>
+
+
+                        <div class="box">
+                            <legend>Now,How will you transfer money?</legend>
+                            <select type="dropdown" id="dropdown" required>
+<option selected disabled>select item</option>
+<option >Gpay</option>
+<option >phone-pay</option>
+<option >whatsapp-pay</option>
+<option >pay-tm</option>
+
+</select>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <p style="color: aliceblue;">your comnents about this generation gap</p>
+                            <div><textarea spellcheck="true" placeholder="leave your coments here"></textarea>
+
+                            </div>
+
+
+                            <br>
+                            <div><label for="submit">
+                    <button type="submit"  id="submit" onclick="success()">submit</button>
+</label>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                </form>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+        
+
+</body>
+
+</html>
