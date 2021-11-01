@@ -7,210 +7,7 @@
     <title>survey website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Goldman:wght@700&family=Modak&family=Orbitron:wght@500&family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="survey.css">
-    <style>
-    body {
-            padding: 0;
-            margin: 0;
-            background: url("https://i.postimg.cc/gj84DKK3/background.jpg");
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        
-        .all {
-            background-attachment: fixed;
-        }
-        
-        #title {
-            margin: 0% 20%;
-            text-align: center;
-            text-transform: capitalize;
-        }
-        
-        #title p {
-            text-transform: none;
-            color: aliceblue;
-            font-family: 'Lobster', cursive;
-        }
-        
-        h1 {
-            font-size: 200%;
-            padding: 11% 0% 0% 0%;
-            font-family: 'Goldman', cursive;
-            ;
-            color: aqua;
-            text-shadow: 0 0 3px #5f4136;
-            cursor: context-menu;
-        }
-        
-        #survey-form {
-            margin: 4% 7%;
-            border: 2px;
-            border-radius: 4px;
-            border-top: 5px solid rgb(185, 240, 103);
-            padding: 4%;
-            z-index: 2;
-            background-color: #101f7573;
-            box-shadow: 0 0 20px 0px #ffffff6e;
-        }
-        
-        .pp {
-            font-size: larger;
-            font-weight: 400;
-            text-align: center;
-            padding: 7px 0px;
-            text-transform: capitalize;
-            color: #25e3fb;
-            font-family: 'Vidaloka', serif;
-        }
-        
-        .twist {
-            max-height: 245px;
-        }
-        
-        .personal {
-            align-items: center;
-        }
-        
-        label {
-            text-transform: capitalize;
-            color: #beff5a;
-            font-family: 'Orbitron', sans-serif;
-            font-size: small;
-        }
-        
-        input {
-            padding: 1% 4%;
-            margin: 0% 0% 0% 3%;
-            border: none;
-            color: white;
-            outline: none;
-            background-color: #101f7500;
-            border-bottom: 2px solid #beff5a91;
-        }
-        
-        input::placeholder {
-            text-align: left;
-            font-size: medium;
-            font-family: monospace;
-        }
-        
-        input:hover {
-            border-bottom: 2px solid #beff5a;
-            background-color: #101f7500;
-            outline: none;
-        }
-        
-        input:focus {
-            background-color: #101f7500;
-        }
-        
-        #radio {
-            padding: 0% 2%;
-        }
-        
-        .box {
-            padding: 6px;
-        }
-        
-        #dropdown {
-            padding: 0% 4%;
-            margin: 0% 0% 0% 3%;
-            border: 1px solid gray;
-            outline: #beff5a;
-        }
-        
-        textarea {
-            margin: 10px 0px;
-            width: 99%;
-            height: 50px;
-            border: 2px solid #beff5a91;
-            border-radius: 5px;
-            outline: none;
-            background-color: #101f7500;
-            color: white;
-            font-size: medium;
-            font-family: monospace;
-        }
-        
-        textarea:hover {
-            border: 2px solid #beff5a;
-        }
-        
-        textarea:focus {
-            border: 2px solid #beff5a;
-        }
-        
-        textarea::placeholder {
-            padding: 3px;
-        }
-        
-        #number {
-            padding: 0% 5%;
-            margin: 0% 0% 0% 4.5%;
-            border: 1px solid #3f51b500;
-            border: 1px solid #beff5a91;
-            width: 80px;
-            border-radius: 5px;
-        }
-        
-        #number:hover {
-            border-bottom: 2px solid #beff5a;
-        }
-        
-        #number:focus {
-            border-bottom: 2px solid #beff5a;
-        }
-        
-        #number::placeholder {
-            text-align: left;
-            font-size: medium;
-            font-family: monospace;
-        }
-        
-        #submit {
-            margin: 3%;
-            padding: 7px;
-            background-color: #79c620;
-            border: 1px solid #a5e25e;
-            border-radius: 3px;
-            color: #1b3bed;
-            FONT-SIZE: medium;
-            box-shadow: 0 0 1px 0px snow;
-            FONT-WEIGHT: 700;
-            transition: 1s;
-        }
-        
-        #submit:hover {
-            box-shadow: 0 0 12px 0px snow;
-        }
-        
-        legend {
-            color: cornsilk;
-            font-size: medium;
-            font-family: monospace;
-            padding: 0% 0% 2% 0%;
-        }
-        
-        .dropgender {
-            padding: 0.4% 4%;
-            margin: 0% 0% 0% 4.5%;
-            border: 1px solid #3f51b500;
-            border: 2px solid #beff5a91;
-            width: 150px;
-            border-radius: 5px;
-        }
-        
-        .g-num {
-            padding: 1% 4%;
-            margin: 0% 0% 0% 3%;
-            border: none;
-            color: black;
-            outline: none;
-            background-color: white;
-            border-bottom: 2px solid #beff5a91;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -381,9 +178,10 @@
                         </div>
 
 
-                        <div class="box">
-                            <legend>Now,How will you transfer money?</legend>
-                            <select type="dropdown" id="dropdown" required>
+ <div class="box">
+<legend>Now,How will you transfer money?</legend>
+<select type="dropdown" id="dropdown" required>
+    
 <option selected disabled>select item</option>
 <option >Gpay</option>
 <option >phone-pay</option>
@@ -391,31 +189,18 @@
 <option >pay-tm</option>
 
 </select>
-                        </div>
-
+</div>
                         <br>
-
                         <div>
                             <p style="color: aliceblue;">your comnents about this generation gap</p>
                             <div><textarea spellcheck="true" placeholder="leave your coments here"></textarea>
 
-                            </div>
-
-
+                        </div>
                             <br>
                             <div><label for="submit">
                     <button type="submit"  id="submit" onclick="success()">submit</button>
 </label>
                             </div>
-
-
-
-
-
-
-
-
-
 
                         </div>
                 </form>
@@ -428,9 +213,6 @@
 
             </div>
         </div>
-
-        
-
 </body>
 
 </html>
